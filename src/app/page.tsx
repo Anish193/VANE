@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import AppNavbar from "@/components/layout/AppNavbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Intelligence from "@/components/Intelligence";
@@ -13,7 +13,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen" style={{ background: "#05070A" }}>
-      <Navbar />
+      <AppNavbar />
       <Hero />
       <Features />
       <Intelligence />
