@@ -11,18 +11,21 @@ const platforms = [
     name: "macOS",
     desc: "macOS 13+ • Apple Silicon & Intel",
     color: "#9CA3AF",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1jCZfGxk8j6UwGoiBt5jJlvHTef165UpT",
   },
   {
     icon: Monitor,
     name: "Windows",
     desc: "Windows 10/11 • x64",
     color: "#60A5FA",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1uStxt3lzfC4MgbYnmO9qgoZQ8tEKxAg4",
   },
   {
     icon: Terminal,
     name: "Linux",
     desc: "Ubuntu 20.04+ • Debian, Arch",
     color: "#F59E0B",
+    downloadUrl: null,
   },
 ];
 
@@ -85,9 +88,20 @@ export default function DownloadSection() {
                   <p className="text-gray-600 text-xs mt-1">{platform.desc}</p>
                 </div>
 
-                <div className="w-full py-2.5 rounded-xl border border-white/5 text-gray-600 text-sm font-semibold text-center">
-                  Coming Soon
-                </div>
+                {platform.downloadUrl ? (
+                  <a
+                    href={platform.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-2.5 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 text-white text-sm font-semibold text-center flex items-center justify-center gap-2 transition-all duration-200"
+                  >
+                    <ArrowRight className="w-4 h-4" /> Download .zip
+                  </a>
+                ) : (
+                  <div className="w-full py-2.5 rounded-xl border border-white/5 text-gray-600 text-sm font-semibold text-center">
+                    Coming Soon
+                  </div>
+                )}
               </motion.div>
             );
           })}

@@ -1,6 +1,5 @@
 import AppNavbar from "@/components/layout/AppNavbar";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
 import Intelligence from "@/components/Intelligence";
 import Architecture from "@/components/Architecture";
 import Capabilities from "@/components/Capabilities";
@@ -15,7 +14,6 @@ export default function Home() {
     <main className="min-h-screen" style={{ background: "#05070A" }}>
       <AppNavbar />
       <Hero />
-      <Features />
       <Intelligence />
       <Architecture />
       <Capabilities />
