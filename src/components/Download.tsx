@@ -11,7 +11,7 @@ const platforms = [
     name: "macOS",
     desc: "macOS 13+ • Apple Silicon & Intel",
     color: "#9CA3AF",
-    downloadUrl: "https://drive.google.com/uc?export=download&id=1jCZfGxk8j6UwGoiBt5jJlvHTef165UpT",
+    downloadUrl: "https://drive.google.com/uc?export=download&id=1GLd6ueZFUdCrFhHFvMzevkNuOb8ex7yS",
   },
   {
     icon: Monitor,
