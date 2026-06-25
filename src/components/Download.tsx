@@ -3,22 +3,16 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { MessageCircle, Monitor, Apple, Terminal, ArrowRight } from "lucide-react";
+import { MessageCircle, Monitor, Terminal, ArrowRight, Apple } from "lucide-react";
 
 const platforms = [
-  {
-    icon: Apple,
-    name: "macOS",
-    desc: "macOS 13+ • Apple Silicon & Intel",
-    color: "#9CA3AF",
-    downloadUrl: "https://drive.google.com/uc?export=download&id=1_xUheqC79RzeI5U6soEWIK_ivXQFWhvb",
-  },
   {
     icon: Monitor,
     name: "Windows",
     desc: "Windows 10/11 • x64",
     color: "#60A5FA",
     downloadUrl: "https://drive.google.com/uc?export=download&id=1uStxt3lzfC4MgbYnmO9qgoZQ8tEKxAg4",
+    note: null,
   },
   {
     icon: Terminal,
@@ -26,6 +20,15 @@ const platforms = [
     desc: "Ubuntu 20.04+ • Debian, Arch",
     color: "#F59E0B",
     downloadUrl: null,
+    note: null,
+  },
+  {
+    icon: Apple,
+    name: "macOS",
+    desc: "macOS support",
+    color: "#6B7280",
+    downloadUrl: null,
+    note: "The dev is genuinely annoyed at Apple for making this so painful to port. macOS support is on hold.",
   },
 ];
 
@@ -88,7 +91,9 @@ export default function DownloadSection() {
                   <p className="text-gray-600 text-xs mt-1">{platform.desc}</p>
                 </div>
 
-                {platform.downloadUrl ? (
+                {platform.note ? (
+                  <p className="text-gray-600 text-xs italic leading-relaxed">{platform.note}</p>
+                ) : platform.downloadUrl ? (
                   <a
                     href={platform.downloadUrl}
                     target="_blank"
